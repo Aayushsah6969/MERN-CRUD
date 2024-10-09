@@ -26,7 +26,7 @@ const DB_URI = process.env.MONGODB_URI;
 
 // Middleware to parse JSON requests
 app.use(cors({
-  origin: '*', // This allows access from any origin
+  origin: 'https://mern-crud-frontend-co09.onrender.com/', // This allows access from this URL origin
   credentials: true,
   methods: "GET, POST, PUT, DELETE",
   allowedHeaders: ['Content-Type', 'Authorization']
