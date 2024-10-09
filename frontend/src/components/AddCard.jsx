@@ -16,7 +16,7 @@ const AddCard = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/text/upload", {
+            const response = await axios.post("https://mern-crud-rvt2.onrender.com/text/upload", {
                 text: formData.text,  // Corrected to use formData.text
                 author: formData.author,
                 image: formData.imageLink,
