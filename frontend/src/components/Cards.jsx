@@ -11,7 +11,7 @@ const Cards = () => {
     useEffect(() => {
         const fetchText = async () => {
             try {
-                const response = await axios.get('https://mern-crud-rvt2.onrender.com');
+                const response = await axios.get('https://mern-crud-rvt2.onrender.com/text/getText');
                 console.log(response.data.text);
                 setText(response.data.text);
                 console.log(response.data.message);
@@ -26,7 +26,7 @@ const Cards = () => {
 
     const HandleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:3000/text/delete/${id}`, {
+            const response = await axios.delete(`https://mern-crud-rvt2.onrender.com/text/delete/${id}`, {
                 withCredentials: true,
             });
             console.log(response.data.message);
@@ -51,7 +51,7 @@ const Cards = () => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:3000/text/update/${currentText._id}`, currentText);
+            const response = await axios.put(`https://mern-crud-rvt2.onrender.com/text/update/${currentText._id}`, currentText);
             console.log(response.data.message);
             setText(Text.map(t => t._id === currentText._id ? response.data.text : t)); // Update the state with the new data
             setEditModalOpen(false); // Close the modal
