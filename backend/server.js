@@ -26,12 +26,12 @@ const DB_URI = process.env.MONGODB_URI;
 
 // Middleware to parse JSON requests
 app.use(cors({
-    origin:'http://localhost:5173',
-    credentials: true,  // Indicates that the server requires client-side cookies in order to send requests to the server
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders: ['Content-Type', 'Authorization'] // Headers that the client can send to the server, like 'Content-Type' or 'Authorization'
-  
-  }))
+  origin: '*', // This allows access from any origin
+  credentials: true,
+  methods: "GET, POST, PUT, DELETE",
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 app.use(express.json());  
 app.use('/text', TextRoute);
