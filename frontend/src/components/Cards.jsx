@@ -11,7 +11,7 @@ const Cards = () => {
     useEffect(() => {
         const fetchText = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/text/getText');
+                const response = await axios.get('https://mern-crud-rvt2.onrender.com');
                 console.log(response.data.text);
                 setText(response.data.text);
                 console.log(response.data.message);
