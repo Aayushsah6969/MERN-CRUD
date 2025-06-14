@@ -35,7 +35,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="text-gray-700 px-3 py-2 rounded-md hover:bg-gray-100"
               >
-                Developer
+            Developer
               </a>
         <Link to="/" className="mx-4 inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
          Home <IoMdHome className='flex justify-center align-middle m-2'/>
